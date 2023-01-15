@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/Daria602/OnlineGameShop/issues"
   },
-  "homepage": "https://github.com/Daria602/OnlineGameShop#readme"
+  "homepage": "https://github.com/Daria602/OnlineGameShop#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^9.0.0",
+    "node-fetch": "^3.3.0",
+    "sequelize": "^6.28.0",
+    "sqlite3": "^5.1.4"
+  },
+  "type": "module"
 }
