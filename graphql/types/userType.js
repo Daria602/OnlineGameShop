@@ -28,7 +28,7 @@ const userType = new GraphQLObjectType({
             games: {
                 type: new GraphQLList(gameType),
                 resolve: async (user) => {
-                    user.getGames();
+                    return await user.getGames();
                 }
             }
         })

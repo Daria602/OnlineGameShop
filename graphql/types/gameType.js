@@ -19,7 +19,7 @@ const gameType = new GraphQLObjectType({
             ownedBy: {
                 type: new GraphQLList(userType),
                 resolve: async (game) => {
-                    game.getUsers();
+                    return await game.getUsers();
                 }
             }
         })
