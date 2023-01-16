@@ -2,13 +2,16 @@ const {
     GraphQLObjectType,
     GraphQLID,
     GraphQLString,
-    GraphQLInt
+    GraphQLInt,
+    GraphQLList
 } = require('graphql');
+
 
 
 const userType = new GraphQLObjectType({
     name: 'User',
     fields: () => {
+        const gameType = require('./gameType');
         return ({
             id: {
                 type: GraphQLID
@@ -21,9 +24,16 @@ const userType = new GraphQLObjectType({
             },
             lastName: {
                 type: GraphQLString
+            },
+            games: {
+                type: new GraphQLList(gameType),
+                resolve: async (user) => {
+                    user.getGames();
+                }
             }
         })
     }
 });
 
 module.exports = userType;
+
