@@ -6,7 +6,7 @@ const {
 } = require("graphql");
 
 const userType = require("../../types/userType");
-const updateUserResolver = require('../../resolvers/updateUserResolver');
+const updateUserResolver = require('../../resolvers/user/updateUserResolver');
 
 module.exports = {
     type: userType,
@@ -22,9 +22,6 @@ module.exports = {
         },
         lastName: {
             type: new GraphQLNonNull(GraphQLString)
-        },
-        addressId: {
-            type: new GraphQLNonNull(GraphQLInt)
         }
     },
     resolve: updateUserResolver,

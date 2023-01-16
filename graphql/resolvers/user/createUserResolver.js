@@ -1,5 +1,5 @@
 const models = require("../../../models");
-module.exports = async (source, { firstName, lastName }, { tokenPayload }) => {
+module.exports = async (source, { email, firstName, lastName }, { tokenPayload }) => {
     // if(!tokenPayload) {
     //     return null;
     // }
