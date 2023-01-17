@@ -16,7 +16,10 @@ module.exports = {
         },
         title: {
             type: new GraphQLNonNull(GraphQLString)
-        }
+        },
+        publisherId: {
+            type: GraphQLInt,
+        },
     },
     resolve: updateGameResolver
 }
