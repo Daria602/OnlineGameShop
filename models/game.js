@@ -9,6 +9,13 @@ module.exports = (sequelize, DataTypes) => {
         through: models.UserGame,
         foreignKey: 'gameId'
       });
+
+      models.Game.belongsToMany(models.Platform, {
+        through: models.PlatformGame,
+        foreignKey: 'gameId'
+      });
+
+      models.Game.belongsTo(models.Publisher, {foreignKey: 'publisherId'});
     }
   }
   Game.init({
