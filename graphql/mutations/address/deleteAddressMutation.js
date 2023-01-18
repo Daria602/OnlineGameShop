@@ -5,16 +5,16 @@ const {
     GraphQLInt,
     GraphQLBoolean,
     GraphQLID,
-  } = require("graphql");
+} = require("graphql");
 
-  const deleteAddressResolver = require('../../resolvers/address/deleteAddressResolver');
+const deleteAddressResolver = require('../../resolvers/address/deleteAddressResolver');
 
-  module.exports = {
-    type: GraphQLBoolean,
-    args: {
-      id: {
-        type: new GraphQLNonNull(GraphQLID)
-      },
+module.exports = {
+  type: GraphQLBoolean,
+  args: {
+    id: {
+      type: new GraphQLNonNull(GraphQLID)
     },
-    resolve: deleteAddressResolver,
-  }
+  },
+  resolve: deleteAddressResolver,
+}

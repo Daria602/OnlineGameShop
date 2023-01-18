@@ -1,5 +1,8 @@
 const models = require("../../../models");
 module.exports = async (source, args, { tokenPayload }) => {
+    if(!tokenPayload) {
+        return null;
+    }
     const {
         id,
         title

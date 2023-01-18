@@ -20,10 +20,8 @@ const createPublisherMutation = require('./mutations/publisher/createPublisherMu
 const updatePublisherMutation = require('./mutations/publisher/updatePublisherMutation');
 const deletePublisherMutation = require('./mutations/publisher/deletePublisherMutation');
 
-const createUserGameMutation = require('./mutations/userGame/createUserGameMutation');
 
-/* const loginMutation = require('./mutations/loginMutation');
-const signupMutation = require('./mutations/signupMutation'); */
+const loginMutation = require('./mutations/loginMutation');
 
 const mutationType = new GraphQLObjectType({
     name: 'Mutation',
@@ -43,10 +41,7 @@ const mutationType = new GraphQLObjectType({
         createPublisher: createPublisherMutation,
         updatePublisher: updatePublisherMutation,
         deletePublisher: deletePublisherMutation,
-
-        /*
-        login: loginMutation,
-        signup: signupMutation*/
+        login: loginMutation
     }
 });
 
